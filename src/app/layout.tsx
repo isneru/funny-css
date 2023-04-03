@@ -1,11 +1,32 @@
 import { StrictRenderer } from "components/client"
 import Link from "next/link"
+import type { Metadata } from "next/types"
 import { ReactNode } from "react"
 import "styles/globals.css"
 
-export const metadata = {
-  title: "Next13 Boilerplate",
-  description: ""
+export async function generateMetadata(): Promise<Metadata | undefined> {
+  const title = "Funny CSS"
+  const description = "🤠"
+  const image = `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/og?title=${title}`
+
+  return {
+    title,
+    description,
+    openGraph: {
+      type: "website",
+      images: [
+        {
+          url: image
+        }
+      ]
+    },
+    twitter: {
+      title,
+      description,
+      card: "summary_large_image",
+      images: [image]
+    }
+  }
 }
 
 interface LayoutProps {
