@@ -19,7 +19,7 @@ export default async function handler(req: NextRequest) {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundImage: "url(http://localhost:3000/og.png)",
+          backgroundImage: `url(${process.env.NEXT_PUBLIC_VERCEL_URL}/og.png)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         }}>

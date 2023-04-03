@@ -2,11 +2,13 @@ import { TwitchVerificationCodeComponent } from "components/client"
 import type { Metadata } from "next"
 
 export async function generateMetadata(): Promise<Metadata | undefined> {
-  const image = `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/og?page=Twitch+Verification+Code`
+  const title = "Twitch Verification Code"
+  const description = "Twitch Verification Code 🔒"
+  const image = `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/og?title=${title}`
 
   return {
-    title: "Twitch Verification Code",
-    description: "Twitch Verification Code 🔒",
+    title,
+    description,
     openGraph: {
       type: "website",
       images: [
@@ -16,8 +18,8 @@ export async function generateMetadata(): Promise<Metadata | undefined> {
       ]
     },
     twitter: {
-      title: "Twitch Verification Code",
-      description: "Twitch Verification Code 🔒",
+      title,
+      description,
       card: "summary_large_image",
       images: [image]
     }
