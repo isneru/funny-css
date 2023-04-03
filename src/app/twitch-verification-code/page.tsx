@@ -2,7 +2,7 @@ import { TwitchVerificationCodeComponent } from "components/client"
 import type { Metadata } from "next"
 
 export async function generateMetadata(): Promise<Metadata | undefined> {
-  const image = `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/og?page=Twitch Verification Code`
+  const image = `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/og?page=Twitch+Verification+Code`
 
   return {
     title: "Twitch Verification Code",
