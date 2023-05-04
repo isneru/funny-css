@@ -7,6 +7,10 @@ body {
 }
 
 @layer components {
+  .circle-hover {
+    animation: spinicon 20s linear infinite;
+  }
+
   input[type="number"]::-webkit-outer-spin-button,
   input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
