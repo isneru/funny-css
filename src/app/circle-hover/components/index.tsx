@@ -30,7 +30,7 @@ export const ButtonCircleHover = () => {
       }}
       className="relative mx-auto overflow-hidden rounded-full bg-white text-black">
       <div className="circle-hover absolute h-40 w-40">
-        {text.split("").map((letter, idx) => (
+        {[...text].map((letter, idx) => (
           <span
             className="absolute h-full w-0 -translate-y-8"
             style={{
